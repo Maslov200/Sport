@@ -6,7 +6,6 @@ import javafx.scene.layout.*;
 public class MainView {
     private VBox view;
     private AthleteController controller;
-
     public MainView() {
         controller = new AthleteController();
 
@@ -21,12 +20,10 @@ public class MainView {
 
         Button addButton = new Button("Добавить спортсмена");
         ListView<String> listView = new ListView<>();
-
         addButton.setOnAction(e -> {
             String name = nameField.getText().trim();
             String surname = surnameField.getText().trim();
             String sport = sportField.getText().trim();
-
             if (!name.isEmpty() && !surname.isEmpty() && !sport.isEmpty()) {
                 controller.addAthlete(name, surname, sport);
                 listView.getItems().clear();
