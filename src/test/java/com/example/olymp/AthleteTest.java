@@ -16,13 +16,10 @@ public class AthleteTest {
 
     @Test
     public void testIncorrectFullName() {
-        // Например, передаем только имя, а фамилия должна быть "Не указано"
         Athlete athlete = new Athlete("Иван", "", "Плавание");
 
         String expectedLastName = "Не указано";
 
-        // Логика обработки некорректного ФИО должна быть реализована в конструкторе Athlete
-        // (если она не реализована — добавь туда)
         assertEquals("Иван", athlete.getFirstName());
         assertEquals(expectedLastName, athlete.getLastName());
     }
